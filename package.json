@@ -19,7 +19,9 @@
     "test:build": "run-s build",
     "test:unit": "cross-env CI=1 react-scripts test --env=jsdom",
     "test:watch": "react-scripts test --env=jsdom",
-    "predeploy": "cd example && npm install && npm run build"
+    "predeploy": "cd example && npm install && npm run build",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "peerDependencies": {
     "react": "17.0.2",
@@ -29,7 +31,12 @@
     "moment": "2.29.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.14.6",
     "@elrondnetwork/erdjs": "5.0.0",
+    "@storybook/addon-actions": "^6.3.4",
+    "@storybook/addon-essentials": "^6.3.4",
+    "@storybook/addon-links": "^6.3.4",
+    "@storybook/react": "^6.3.4",
     "@testing-library/jest-dom": "5.12.0",
     "@testing-library/react": "11.2.6",
     "@testing-library/user-event": "13.1.8",
@@ -41,6 +48,7 @@
     "@typescript-eslint/eslint-plugin": "4.22.1",
     "@typescript-eslint/parser": "4.22.1",
     "babel-eslint": "10.1.0",
+    "babel-loader": "^8.2.2",
     "cross-env": "7.0.3",
     "eslint": "7.25.0",
     "eslint-config-standard": "16.0.2",
