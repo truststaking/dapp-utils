@@ -5,9 +5,7 @@ import Denominate from "..";
 export default {
   title: "Components/Denominate",
   component: Denominate,
-  argTypes: {
-    backgroundColor: { control: "color" },
-  },
+  argTypes: {},
 } as ComponentMeta<typeof Denominate>;
 
 const Template: ComponentStory<typeof Denominate> = (args) => (
