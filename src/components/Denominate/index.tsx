@@ -1,6 +1,6 @@
 import React from "react";
 import stringIsInteger from "validation/stringIsInteger";
-import denominate from "./denominate";
+import denominate from "../../operations/denominate";
 import {
   denomination as configDenomination,
   decimals as configDecimals,

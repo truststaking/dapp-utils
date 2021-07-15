@@ -1,9 +1,9 @@
-import denominate from './../denominate';
+import denominate from "./../denominate";
 
-describe('denomination 4,4', () => {
+describe("denomination 4,4", () => {
   const numbers: { [key: string]: string } = {
-    '9999999999999999999999990000': '999,999,999,999,999,999,999,999',
-    '0': '0',
+    "9999999999999999999999990000": "999,999,999,999,999,999,999,999",
+    "0": "0",
   };
   const denomination = 4;
   const decimals = 4;
@@ -22,11 +22,11 @@ describe('denomination 4,4', () => {
   }
 });
 
-describe('denomination 8,4', () => {
+describe("denomination 8,4", () => {
   const numbers: { [key: string]: string } = {
-    '9999999999999999999899996000': '99,999,999,999,999,999,998.9999',
-    '0': '0',
-    '10000': '0.0001',
+    "9999999999999999999899996000": "99,999,999,999,999,999,998.9999",
+    "0": "0",
+    "10000": "0.0001",
   };
   const denomination = 8;
   const decimals = 4;
@@ -45,9 +45,9 @@ describe('denomination 8,4', () => {
   }
 });
 
-describe('denomination 0,0', () => {
+describe("denomination 0,0", () => {
   const numbers: { [key: string]: string } = {
-    '350': '350',
+    "350": "350",
   };
   const denomination = 0;
   const decimals = 0;
@@ -66,9 +66,9 @@ describe('denomination 0,0', () => {
   }
 });
 
-describe('denomination 4,8,true', () => {
+describe("denomination 4,8,true", () => {
   const numbers: { [key: string]: string } = {
-    '12345678901234567890123': '123,456,789,012,345.67890123',
+    "12345678901234567890123": "123,456,789,012,345.67890123",
   };
   const denomination = 8;
   const decimals = 4;
@@ -87,11 +87,11 @@ describe('denomination 4,8,true', () => {
   }
 });
 
-describe('denomination 18,0,true', () => {
+describe("denomination 18,0,true", () => {
   const numbers: { [key: string]: string } = {
-    '102000000000000000': '0.102',
-    '100000000000000000': '0.1',
-    '1000000000000000000': '1',
+    "102000000000000000": "0.102",
+    "100000000000000000": "0.1",
+    "1000000000000000000": "1",
   };
   const denomination = 18;
   const decimals = 0;
@@ -110,10 +110,10 @@ describe('denomination 18,0,true', () => {
   }
 });
 
-describe('denomination float throws error', () => {
+describe("denomination float throws error", () => {
   const numbers: { [key: string]: string } = {
-    '0.015': 'Throws error',
-    '01000000000000000000': 'Throws error',
+    "0.015": "Throws error",
+    "01000000000000000000": "Throws error",
   };
   const denomination = 18;
   const decimals = 4;
@@ -121,7 +121,7 @@ describe('denomination float throws error', () => {
     const input = Object.keys(numbers)[i];
     const output = numbers[input];
     it(`denominate ${input} -> ${output}`, () => {
-      let err = '';
+      let err = "";
       try {
         denominate({
           input,
@@ -134,18 +134,18 @@ describe('denomination float throws error', () => {
       } catch (error) {
         err = error;
         expect(err).toBeInstanceOf(Error);
-        expect(error).toHaveProperty('message', 'Invalid input');
+        expect(error).toHaveProperty("message", "Invalid input");
       }
     });
   }
 });
 
-describe('denomination negative', () => {
+describe("denomination negative", () => {
   const numbers: { [key: string]: string } = {
-    '-922506751086064008': '-0.922506751086064008',
-    '-578345000000000000000': '-578.3450',
-    '-1578345000000000000000': '-1,578.3450',
-    '-3456000000000000000': '-3.4560',
+    "-922506751086064008": "-0.922506751086064008",
+    "-578345000000000000000": "-578.3450",
+    "-1578345000000000000000": "-1,578.3450",
+    "-3456000000000000000": "-3.4560",
   };
   const denomination = 18;
   const decimals = 4;
