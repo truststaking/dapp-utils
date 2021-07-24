@@ -4,7 +4,7 @@
   "description": "Elrond Dapp Utils",
   "author": "ElrondNetwork",
   "license": "MIT",
-  "repository": "@elrondnetwork/utils",
+  "repository": "@elrondnetwork/dapp-utils",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.tsx",
