@@ -1,9 +1,9 @@
 {
-  "name": "@elrondnetwork/utils",
-  "version": "0.0.8",
-  "description": "Elrond Utils",
+  "name": "@elrondnetwork/dapp-utils",
+  "version": "0.0.9",
+  "description": "Elrond Dapp Utils",
   "author": "ElrondNetwork",
-  "license": "GPL-3.0-or-later",
+  "license": "MIT",
   "repository": "@elrondnetwork/utils",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",

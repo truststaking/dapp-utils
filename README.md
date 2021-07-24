@@ -7,24 +7,24 @@
 ## Install
 
 ```bash
-npm install --save utils
+npm install dapp-utils
 ```
 
 ## Usage
 
 ```tsx
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
-import MyComponent from 'utils'
-import 'utils/dist/index.css'
+import MyComponent from "utils";
+import "utils/dist/index.css";
 
 class Example extends Component {
   render() {
-    return <MyComponent />
+    return <MyComponent />;
   }
 }
 ```
 
 ## License
 
-MIT © [arhtudormorar](https://github.com/arhtudormorar)
+MIT © [ElrondNetwork](https://github.com/ElrondNetwork)
