@@ -49,6 +49,8 @@ Params:
 | Name | type | required | default | Description |
 | :---: | :---: | :---: | :---: | :---: |
 | **amount** | string | **yes** | - | Amount that needs to be checked |
+
+
 **Returns boolean**
 
 <br><br><br>
@@ -66,6 +68,8 @@ Params:
 | Name | type | required | default | Description |
 | :---: | :---: | :---: | :---: | :---: |
 | **amount** | string | **yes** | - | Amount that needs to be checked |
+
+
 **Returns boolean**
 
 
@@ -84,6 +88,8 @@ Params:
 | :---: | :---: | :---: | :---: | :---: |
 | **input** | string  | **yes** | - | Value that needs to be nominated|
 | **customDenomination** | number | no | 18 | Custom denomination value |
+
+
 **Returns string**
 
 <br><br><br>
@@ -105,6 +111,9 @@ Params:
 | **decimals** | number | **yes** | - | Specifies how many decimals should be displayed|
 | **showLastNonZeroDecimals** | boolean | no | false | Shows the last non zero decimal |
 | **addCommas** | boolean | no | true | Formats the number with commas |
+
+
+
 **Returns string**
 
 
@@ -122,6 +131,9 @@ Params:
 | Name | type | required | default | Description |
 | :---: | :---: | :---: | :---: | :---: |
 | **data** | string  | **yes** | - | string representing operation and Hex ecoded values of token and amount|
+
+
+
 **Returns data** {
 tokenId: string;
 nominatedTokenAmount: string
