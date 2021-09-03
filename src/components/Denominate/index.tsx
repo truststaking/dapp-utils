@@ -6,7 +6,8 @@ import {
   decimals as configDecimals,
   erdLabel as configErdLabel,
 } from "config";
-interface DenominateType {
+
+export interface DenominateType {
   value: string;
   showLastNonZeroDecimal?: boolean;
   showLabel?: boolean;
@@ -81,7 +82,16 @@ const denominateValid = (props: DenominateType) => {
   );
 };
 
-const Denominate = (props: DenominateType) => {
+const Denominate = (props: {
+  value: string;
+  showLastNonZeroDecimal?: boolean;
+  showLabel?: boolean;
+  token?: string;
+  decimals?: number;
+  denomination?: number;
+  erdLabel?: string;
+  "data-testid"?: string;
+}) => {
   const { value } = props;
 
   return !stringIsInteger(value)
