@@ -12,7 +12,7 @@ import {
   GasPriceModifier,
 } from "@elrondnetwork/erdjs";
 
-import { stringIsInteger } from "validation";
+import stringIsInteger from "validation/stringIsInteger";
 import stringIsFloat from "validation/stringIsFloat";
 interface CalculateFeeLimitType {
   minGasLimit: string;
