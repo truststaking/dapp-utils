@@ -1,7 +1,8 @@
 //#region comopnents
 import Trim from "components/Trim";
 import Denominate from "components/Denominate";
-export const Ui = { Trim, Denominate };
+import UsdValue from "components/UsdValue";
+export const Ui = { UsdValue, Trim, Denominate };
 //#endregion
 
 //#region operations
@@ -17,7 +18,14 @@ export const operations = {
 };
 //#endregion
 
-//#region operations
+//#region helpers
+import usdValue from "./helpers/usdValue";
+export const helpers = {
+  usdValue,
+};
+//#endregion
+
+//#region validation
 import stringIsInteger from "./validation/stringIsInteger";
 import stringIsFloat from "./validation/stringIsFloat";
 export const validation = { stringIsInteger, stringIsFloat };
