@@ -42,22 +42,22 @@ const Trim = ({
   return (
     <span
       ref={trimRef}
-      className={`trim ${overflow ? "overflow" : ""} ${className}`}
+      className={`trim ${overflow ? "overflow" : ""}`}
       data-testid={dataTestId}
     >
-      <span ref={hiddenTextRef} className={`hidden-text-ref ${className}`}>
+      <span ref={hiddenTextRef} className="hidden-text-ref">
         {text}
       </span>
 
       {overflow ? (
         <React.Fragment>
-          <span className="left">
+          <span className={`left ${className}`}>
             <span>
               {String(text).substring(0, Math.floor(text.length / 2))}
             </span>
           </span>
-          <span className="ellipsis">...</span>
-          <span className="right">
+          <span className={`ellipsis ${className}`}>...</span>
+          <span className={`right ${className}`}>
             <span>{String(text).substring(Math.ceil(text.length / 2))}</span>
           </span>
         </React.Fragment>
