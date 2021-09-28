@@ -3,10 +3,12 @@ import useDebounce from "helpers/useDebounce";
 
 const Trim = ({
   text,
-  dataTestId = "",
+  "data-testid": dataTestId,
+  className = "",
 }: {
   text: string;
-  dataTestId?: string;
+  "data-testid"?: string;
+  className?: string;
 }) => {
   const [debounce, setDebounce] = React.useState(0);
 
@@ -27,7 +29,6 @@ const Trim = ({
     };
   };
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   React.useEffect(effect, [debounce]);
 
   React.useEffect(() => {
@@ -41,10 +42,10 @@ const Trim = ({
   return (
     <span
       ref={trimRef}
-      className={`trim ${overflow ? "overflow" : ""}`}
+      className={`trim ${overflow ? "overflow" : ""} ${className}`}
       data-testid={dataTestId}
     >
-      <span ref={hiddenTextRef} className="hidden-text-ref">
+      <span ref={hiddenTextRef} className={`hidden-text-ref ${className}`}>
         {text}
       </span>
 
@@ -61,7 +62,7 @@ const Trim = ({
           </span>
         </React.Fragment>
       ) : (
-        <span>{text}</span>
+        <span className={className}>{text}</span>
       )}
     </span>
   );
