@@ -51,14 +51,16 @@ const Trim = ({
 
       {overflow ? (
         <React.Fragment>
-          <span className={`left ${className}`}>
-            <span>
+          <span className="left">
+            <span className={className}>
               {String(text).substring(0, Math.floor(text.length / 2))}
             </span>
           </span>
           <span className={`ellipsis ${className}`}>...</span>
-          <span className={`right ${className}`}>
-            <span>{String(text).substring(Math.ceil(text.length / 2))}</span>
+          <span className="right">
+            <span className={className}>
+              {String(text).substring(Math.ceil(text.length / 2))}
+            </span>
           </span>
         </React.Fragment>
       ) : (
